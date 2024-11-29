@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar with Menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f3f3;
+        }
+
+        /* Sidebar Container */
+        .sidebar {
+            background-color:black;
+            width: 294px;
+            height: 1000px;
+            color: #fff;
+            
+            position: fixed;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+        }
+
+        /* Logo Section */
+        .logo-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .logo-section img {
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 120px;
+            margin-bottom: 20px;
+
+        }
+       
+
+        .logo-section .arrow-icon {
+            font-size: 30px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        /* Admin Dropdown Section */
+        .dropdown {
+            width: 100%;
+        }
+
+        .dropdown-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #444;
+            padding: 15px 20px;
+            cursor: pointer;
+            border: 1px solid #333;
+        }
+
+        .dropdown-header i {
+            margin-right: 10px;
+            font-size: 18px;
+        }
+
+        .dropdown-header span {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .dropdown-header .chevron {
+            margin-left: auto;
+            font-size: 14px;
+        }
+
+        /* Dropdown Content */
+        .dropdown-content {
+            display: none;
+            background-color: #222;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .dropdown-content li {
+            /* Removed border-top here */
+        }
+
+        .dropdown-content a {
+           
+         display: flex;
+         align-items: center;
+        text-decoration: none;
+        color: #fff;
+        padding: 12px 30px; /* Increased left and right padding */
+         transition: background-color 0.3s ease;
+        }
+
+        .dropdown-content a i {
+            margin-right: 10px;
+            font-size: 16px;
+        }
+
+        .dropdown-content a span {
+            font-size: 14px;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #444;
+        }
+
+        /* Active/Selected Style */
+        .dropdown-content a.active {
+            color: #ffa500; /* Orange color for the selected item */
+        }
+
+        /* Checkbox Toggle Logic */
+        .dropdown-toggle {
+            display: none;
+        }
+
+        .dropdown-toggle:checked + .dropdown-header + .dropdown-content {
+            display: block;
+        }
+
+        /* Additional Menu Items */
+        .menu {
+            width: 100%;
+            margin-top: 20px;
+            list-style: none;
+            padding: 0;
+        }
+
+        .menu-item {
+            /* Removed border-top here */
+        }
+
+        .menu-link {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #fff;
+            padding: 15px 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .menu-link i {
+            margin-right: 10px;
+            font-size: 16px;
+        }
+
+        .menu-link:hover {
+            background-color: #444;
+        }
+        .back-arrow {
+            align-self: flex-start;
+            margin-left: 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 16px;
+            color: white;
+        }
+
+        .back-arrow:hover {
+            color: rgb(0, 136, 255);
+        }
+    </style>
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        
+        <!-- Logo Section -->
+     
+            <div class="back-arrow">
+                <svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M6.65718 15.6063L0.375534 9.02013C0.238976 8.87696 0.142475 8.72185 0.0860312 8.55481C0.028677 8.38777 0 8.2088 0 8.0179C0 7.82699 0.028677 7.64802 0.0860312 7.48098C0.142475 7.31394 0.238976 7.15884 0.375534 7.01566L6.69132 0.393736C6.94168 0.131245 7.24893 0 7.61309 0C7.97724 0 8.29587 0.143176 8.56899 0.42953C8.81934 0.69202 8.94452 1.0261 8.94452 1.43177C8.94452 1.83743 8.81934 2.17151 8.56899 2.434L4.60882 6.58613H22.6344C23.0213 6.58613 23.3454 6.7231 23.6067 6.99705C23.8689 7.27194 24 7.61223 24 8.0179C24 8.42356 23.8689 8.76337 23.6067 9.03731C23.3454 9.31221 23.0213 9.44966 22.6344 9.44966H4.60882L8.60313 13.6376C8.85349 13.9001 8.97866 14.2222 8.97866 14.604C8.97866 14.9858 8.8421 15.3199 8.56899 15.6063C8.31863 15.8688 8 16 7.61309 16C7.22617 16 6.90754 15.8688 6.65718 15.6063Z"
+                        fill="white" />
+                </svg>
+    
+            </div>
+            <div class="logo-section">
+            <!-- <i class="fas fa-arrow-left arrow-icon"></i> -->
+            <img src="../assets/images.jpg" alt="Fitness Logo">
+        </div>
+
+        <!-- Admin Dropdown -->
+        <div class="dropdown">
+            <input type="checkbox" id="admin-dropdown" class="dropdown-toggle">
+            <label for="admin-dropdown" class="dropdown-header">
+                <i class="fas fa-th-large"></i>
+                <span>Admin</span>
+                <i class="fas fa-chevron-down chevron"></i>
+            </label>
+            <ul class="dropdown-content">
+                <li><a href="#" class="submenu-link"><i class="fas fa-users"></i><span>Staff/Trainers</span></a></li>
+                <li><a href="#" class="submenu-link active"><i class="fas fa-id-card"></i><span>Membership</span></a></li>
+                <li><a href="#" class="submenu-link"><i class="fas fa-dumbbell"></i><span>All Classes</span></a></li>
+                <li><a href="#" class="submenu-link"><i class="fas fa-calendar-check"></i><span>Attendance</span></a></li>
+            </ul>
+        </div>
+
+        <!-- Additional Menu Items -->
+        <ul class="menu">
+            <li class="menu-item"><a href="#" class="menu-link"><i class="fas fa-address-book"></i><span>All Members</span></a></li>
+            <li class="menu-item"><a href="#" class="menu-link"><i class="fas fa-user-tie"></i><span>Trainer</span></a></li>
+            <li class="menu-item"><a href="#" class="menu-link"><i class="fas fa-user-friends"></i><span>Trainee</span></a></li>
+            <li class="menu-item"><a href="#" class="menu-link"><i class="fas fa-heartbeat"></i><span>Health Updates</span></a></li>
+            <li class="menu-item"><a href="#" class="menu-link"><i class="fas fa-money-bill"></i><span>Member Payment</span></a></li>
+            <li class="menu-item"><a href="#" class="menu-link"><i class="fas fa-cogs"></i><span>Plan</span></a></li>
+        </ul>
+    </div>
+</body>
+</html>

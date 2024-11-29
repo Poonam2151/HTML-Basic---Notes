@@ -1,0 +1,50 @@
+p.uppercase{
+    text-transform: uppercase;
+    font-size: 100%;
+}
+p.lowercase{
+    text-transform: lowercase;
+    font-size:1em;
+}
+p.capitalize{
+    text-align:start;
+}
+p{
+    text-indent: 30px;
+    font-family: "Playwrite GB S", cursive;
+    font-weight: 900;
+    font-variant:initial;
+    font-size:x-large;  
+
+}
+h3{
+    letter-spacing:5px;
+    background-color: rgb(191, 191, 241);
+    width:min(100%,500px)
+}
+p.line_height{
+        line-height: 10px;
+}
+p.wordspacing{
+    word-spacing:20px;
+    font-family:'Times New Roman', Times, serif;
+    width:max(100%,200px)
+}
+p.shadow{
+    text-shadow: 2px 2px 3px red;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+}
+ol.orderd{
+    list-style-type:lower-alpha;
+    list-style-position:outside;
+}
+ul.unorderd{
+    list-style-type:circle;
+    list-style-position:inherit;
+}
+body{
+    
+    width:calc(100%-1000px)
+    
+}

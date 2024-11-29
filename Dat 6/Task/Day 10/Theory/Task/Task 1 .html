@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navbar</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+
+  <!-- Navbar -->
+  <nav class="bg-blue-900 p-4 shadow-md">
+    <div class="container mx-auto flex items-center justify-between">
+      <!-- Brand Logo -->
+      <div class="text-xl font-bold text-white">Software</div>
+
+      <!-- Hamburger Icon (hidden on md and up) -->
+      <button class="md:hidden text-gray-500 focus:outline-none" id="menu-button">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+        </svg>
+      </button>
+
+      <!-- Navigation Links -->
+      <div class="hidden md:flex md:space-x-6 md:justify-center lg:justify-end w-full" id="nav-links">
+        <a href="#" class="text-white hover:text-pink-900">Home</a>
+        <a href="#" class="text-white hover:text-pink-900">About</a>
+        <a href="#" class="text-white hover:text-pink-900">Services</a>
+        <a href="#" class="text-white hover:text-pink-900">Contact</a>
+      </div>
+    </div>
+
+    <!-- Mobile Menu (hidden by default) -->
+    <div class="md:hidden" id="mobile-menu" style="display: none;">
+      <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Home</a>
+      <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">About</a>
+      <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Services</a>
+      <a href="#" class="block px-4 py-2 text-gray-600 hover:bg-gray-100">Contact</a>
+    </div>
+  </nav>
+
+  <!-- JavaScript to Toggle Mobile Menu -->
+  <script>
+    const menuButton = document.getElementById('menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuButton.addEventListener('click', () => {
+      if (mobileMenu.style.display === 'none') {
+        mobileMenu.style.display = 'block';
+      } else {
+        mobileMenu.style.display = 'none';
+      }
+    });
+  </script>
+
+</body>
+</html>
+
+
+

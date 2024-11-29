@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header</title>
+    <style>
+        /* Embedded CSS for Header */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f3f4f6; /* Light background */
+        }
+
+        .header {
+            background-color: #f3f4f6; /* Light gray background */
+            padding: 1rem;
+           
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+           
+        }
+
+        .welcome-text {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #333; /* Darker text */
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 1rem; /* Space between icons and profile */
+        }
+
+        .icon {
+            width: 26px;
+            height: 26px;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
+
+        .icon:hover {
+            opacity: 0.7; /* Hover effect */
+        }
+
+        .profile {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem; /* Space between username and profile image */
+        }
+
+        .username {
+            font-size: 0.9rem;
+            color: black; /* Muted text */
+        }
+
+        .profile-image {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%; /* Make circular */
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div>
+            <!-- Welcome Text -->
+            <h1 class="welcome-text">Welcome Admin!</h1>
+        </div>
+        <div class="header-right">
+            <!-- Notification Icon -->
+            <a href="#notifications">
+                <img src="../assets/notification_1.png" alt="Notifications" class="icon">
+            </a>
+            <!-- Settings Icon -->
+            <a href="#settings">
+                <img src="../assets/setting.png" alt="Settings" class="icon">
+            </a>
+            <!-- Username and Profile -->
+            <div class="profile">
+                <span class="username">Username</span>
+                <img src="../assets/lady.jpg" alt="Profile" class="profile-image">
+            </div>
+        </div>
+    </header>
+</body>
+</html>

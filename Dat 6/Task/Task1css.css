@@ -1,0 +1,114 @@
+/* .resume-container{
+    background-color: black;
+   
+}
+.resume1 {
+background-color: white;
+width: 800px;
+padding: 20px;
+box-shadow: 0 0 70px rgba(7, 0, 0, 0.1);
+border-radius: 0px;
+height: 800px;
+margin-left: 330px;
+}
+.top {
+    background-color: rgb(152, 237, 247);
+    width: 800px;
+    padding: 20px;
+    box-shadow: 0 0 70px rgba(7, 0, 0, 0.1);
+    border-radius: 0px;
+    height: 80px;
+    margin-bottom: 0px;
+    margin-left: 330px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text: --top;
+    } */
+     
+/* styles.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+   
+}
+
+.resume-container {
+    background: white;
+    width: 900px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+   
+}
+
+.header {
+    text-align: center;
+    background: #d5e5f5;
+    color:black;
+    padding: 20px;
+    border-radius: 10px 10px 0 0;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+.header p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.left-column, .right-column {
+    width: 48%;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.section h2 {
+    font-size: 20px;
+    color: #0073e6;
+    border-bottom: 2px solid #000305;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.section p, .section ul {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.section ul {
+    list-style-type: square;
+    margin-left: 20px;
+}
+
+.experience-item, .education-item {
+    margin-bottom: 15px;
+}
+
+.experience-item h3, .education-item h3 {
+    margin: 5px 0;
+    font-size: 18px;
+    color: #0073e6;
+}
+
+.experience-item p, .education-item p {
+    font-size: 14px;
+    color: #666;
+}
+

@@ -1,0 +1,25 @@
+div{
+    /* padding-left: 200px; */
+    text-align: center;
+    border-style: solid;
+    height: 50%;
+    outline-width: 10px;
+    background-color:white;
+    margin-left: 400px;
+    margin-right: 400px;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+img{
+    border-radius:50%;
+}
+input{
+    background-color: rgb(59, 59, 240);
+  font-size: larger;
+  height: 50px;
+  width: 80px;
+}
+body{
+    background-color: black;
+}
+

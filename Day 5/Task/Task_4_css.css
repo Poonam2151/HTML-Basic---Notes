@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Create two equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    height: 300px;
+    margin-top: 10px;
+    justify-content: center;
+    
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+#btn{
+    background-color: rgb(96, 247, 96);
+    font-size:larger;
+    height:30px;
+    width:200px;
+  }
+  
