@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <div class="sidebar h-full">
+            <iframe 
+                src="../components/sidebar.html" 
+                frameborder="0" 
+                class="sidebar-iframe w-64 h-full">
+            </iframe>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 flex flex-col rounded-full">
+            <!-- Header -->
+            <div class="h-16 bg-white overflow-hidden">
+                <iframe src="../components/header.html" frameborder="0" class="w-full h-full" scrolling="no"></iframe>
+            </div>
+
+            <!-- Membership Card -->
+            <div class="p-6 rounded-md">
+                <div class="bg-white p-0 rounded-md border table-auto border border-gray-400">
+                    <div class="flex justify-between items-center p-6 border border-gray-400">
+                        <h3 class="text-xl font-semibold">Add Trainee</h3>
+                        <div class="flex space-x-4">
+                            <div class="relative"></div>
+                        </div>
+                    </div>
+
+                    <!-- Membership Table -->
+                    <div class="grid grid-cols-12 gap-6 p-10 h-96">
+                        <!-- Left Column -->
+                        <div class="col-span-6 space-y-4">
+                            <!-- Name -->
+                            <div class="flex">
+                                <label for="name" class="w-80 text-gray-700 font-semibold font-poppins">Name</label>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    class="border rounded-md px-3 py-1 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                />
+                            </div>
+                            
+                            <!-- DOB -->
+                            <div class="flex">
+                                <label for="dob" class="w-80 text-gray-700 font-semibold">DOB</label>
+                                <input
+                                    type="date"
+                                    id="dob"
+                                    class="border rounded-md px-3 py-1 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                    style="appearance: none; -webkit-appearance: none; -moz-appearance: none;"
+                                />
+                            </div>
+                            
+                            <!-- Age -->
+                            <div class="flex">
+                                <label for="age" class="w-80 text-gray-700 font-semibold">Age</label>
+                                <input
+                                    type="number"
+                                    id="age"
+                                    class="border rounded-md px-3 py-1 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                />
+                            </div>
+                            
+                            <!-- Membership -->
+                            <div class="flex">
+                                <label for="membership" class="w-80 text-gray-700 font-semibold">Membership</label>
+                                <select
+                                    id="membership"
+                                    class="border rounded-md px-3 py-1 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                >
+                                    <option>-Select Membership-</option>
+                                    <option>Basic</option>
+                                    <option>Premium</option>
+                                </select>
+                            </div>
+                            
+                            <!-- Next Payment Schedule Date -->
+                            <div class="flex space-x-4">
+                                <label for="payment-date" class="text-sm text-gray-700 font-semibold whitespace-nowrap">
+                                    Next Payment Schedule Date
+                                </label>
+                                <input 
+                                    id="payment-date"
+                                    type="date" 
+                                    class="border border-gray-300 rounded px-3 py-1 text-sm w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                />
+                            </div>
+                            
+                            <!-- Personal Trainer -->
+                            <div class="flex">
+                                <label for="trainer" class="w-80 text-gray-700 font-semibold">Personal Trainer</label>
+                                <select
+                                    id="trainer"
+                                    class="border rounded-md px-3 py-1 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                >
+                                    <option>-Select Trainer-</option>
+                                    <option>Trainer 1</option>
+                                    <option>Trainer 2</option>
+                                </select>
+                            </div>
+                            
+                            <!-- Classes -->
+                            <div class="flex">
+                                <label for="classes" class="w-80 text-gray-700 font-semibold">Classes</label>
+                                <select
+                                    id="classes"
+                                    class="border rounded-md px-3 py-1 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                >
+                                    <option>-Select Class-</option>
+                                    <option>Yoga</option>
+                                    <option>Pilates</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <!-- Right Column -->
+                        <div class="col-span-6 space-y-4">
+                            <!-- Email ID -->
+                            <div class="flex items-center">
+                                <label for="email" class="w-48 text-gray-700 font-semibold">Email ID</label>
+                                <input type="email" id="email" class="border rounded-md px-3 py-1 w-full focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                            </div>
+
+                            <!-- Contact Number -->
+                            <div class="flex items-center">
+                                <label for="contact" class="w-48 text-gray-700 font-semibold">Contact Number</label>
+                                <input type="text" id="contact" class="border rounded-md px-3 py-1 w-full focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                            </div>
+
+                            <!-- Address -->
+                            <div class="flex items-center">
+                                <label for="address" class="w-48 text-gray-700 font-semibold">Address</label>
+                                <textarea id="address" class="h-20 border rounded-md px-3 py-1 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                            </div>
+
+                            <!-- Photo -->
+                            <div class="flex items-center">
+                                <label for="photo" class="text-gray-700 font-semibold">Photo</label>
+                                <div class="ml-24 w-48 border-2 border-dashed border-gray-300 rounded-md px-3 py-1 text-center text-gray-400 cursor-pointer hover:border-blue-500 hover:text-blue-500 transition">
+                                    <label for="photo-upload" class="cursor-pointer">
+                                        <span class="text-blue-500 ">Upload</span> or Drag here
+                                        <input id="photo-upload" type="file" class="hidden" />
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Join Date -->
+                            <div class="flex items-center">
+                                <label for="join-date" class="w-48 text-gray-700 font-semibold">Join Date</label>
+                                <input 
+                                    type="date" 
+                                    id="join-date" 
+                                    class="border rounded-md px-3 py-1 w-full appearance-none focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                                    style="appearance: none; -webkit-appearance: none; -moz-appearance: none;" 
+                                />
+                            </div>
+
+                            <!-- End Date -->
+                            <div class="flex items-center">
+                                <label for="end-date" class="w-48 text-gray-700 font-semibold">End Date</label>
+                                <input 
+                                    type="date" 
+                                    id="end-date" 
+                                    class="border rounded-md px-3 py-1 w-full appearance-none focus:outline-none focus:ring-2 focus:ring-blue-500" 
+                                    style="appearance: none; -webkit-appearance: none; -moz-appearance: none;" 
+                                />
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Buttons -->
+                    <div class="p-6 justify-start space-x-4 mt-6 mb-10 ">
+                       
+                        <button type="submit" class="px-6 py-2 bg-orange-500 text-white rounded-md hover:bg-orange-600">
+                            Save
+                        </button>
+                        <button type="reset" class="px-6 py-2 border border-gray-400 text-gray-600 rounded-md hover:bg-gray-100">
+                          Reset
+                      </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
