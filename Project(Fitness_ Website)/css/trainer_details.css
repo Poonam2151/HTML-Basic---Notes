@@ -1,0 +1,149 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+  }
+  
+  .container {
+    display: flex;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 250px;
+    background-color: #2c2c2c;
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .logo {
+    padding: 20px;
+  }
+  
+  .logo img {
+    width: 150px;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  
+  nav ul li {
+    width: 100%;
+  }
+  
+  nav ul li a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    border-left: 5px solid transparent;
+  }
+  
+  nav ul li a:hover,
+  nav ul li a.active {
+    background-color: #f68026;
+    border-left: 5px solid white;
+  }
+  
+  /* Main Content */
+  .main-content {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .header h1 {
+    font-size: 24px;
+  }
+  
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .search-bar {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }
+  
+  .profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .profile-img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+  
+  /* Trainer Details Section */
+  .trainer-details {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .details-card {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .personal-details {
+    flex: 2;
+  }
+  
+  .personal-details .profile-image img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+  
+  .profession {
+    font-size: 16px;
+    color: gray;
+    margin-bottom: 10px;
+  }
+  
+  .about h4,
+  .dob h4 {
+    margin: 15px 0 5px;
+  }
+  
+  .contact-details {
+    flex: 1;
+  }
+  
+  .contact-details h4 {
+    margin-bottom: 10px;
+  }
+  
+  .contact-details p {
+    margin: 5px 0;
+  }
+  
